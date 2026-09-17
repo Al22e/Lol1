@@ -1,0 +1,10 @@
+[build]
+  functions = "netlify/functions"
+  # Si tu sitio es estático (solo el HTML/CSS/JS), publica esa carpeta.
+  # Cámbialo si tu draft.html vive en otra carpeta (ej. "public").
+  publish = "."
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
